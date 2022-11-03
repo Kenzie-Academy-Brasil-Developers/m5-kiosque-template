@@ -39,7 +39,7 @@ class TestGetProductByType(unittest.TestCase):
         msg = self.base_msg % ("retornando corretamente os produtos encontrados",)
         self.assertListEqual(result, expected, msg)
 
-    def test_get_product_by_id_with_non_existing_id(self):
+    def test_get_product_by_type_with_non_existing_type(self):
         """
         Testa se a função `get_product_by_id` retorna um dicionário vazio caso o id do produto não seja encontrado no menu [0 pts].
         """
