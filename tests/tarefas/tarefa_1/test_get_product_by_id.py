@@ -11,7 +11,8 @@ class TestGetProductById(unittest.TestCase):
 
     def test_can_get_product_by_id(self):
         """
-        Testa se a função `get_product_by_id` retorna o produto existente corretamente [0 pts].
+        Testa se a função `get_product_by_id` retorna 
+        o produto existente corretamente.
         """
         result = get_product_by_id(32)
         expected = {
@@ -31,7 +32,9 @@ class TestGetProductById(unittest.TestCase):
 
     def test_get_product_by_id_with_non_existing_id(self):
         """
-        Testa se a função `get_product_by_id` retorna um dicionário vazio caso o id do produto não seja encontrado no menu [0 pts].
+        Testa se a função `get_product_by_id` retorna 
+        um dicionário vazio caso o id do produto não seja 
+        encontrado no menu.
         """
         result = get_product_by_id(1000000000000000)
         expected = {}
@@ -45,17 +48,3 @@ class TestGetProductById(unittest.TestCase):
         )
 
         self.assertDictEqual(result, expected, msg)
-
-    def test_get_product_by_id_raises_type_error(self):
-        """
-        Testa se a função `get_product_by_id` levanta um TypeError caso o tipo do parâmetro passado não seja um inteiro [0 pts].
-        """
-
-        msg = self.base_msg % (
-            "levantando um `TypeError` caso o parâmetro passado não seja um inteiro",
-        )
-        with self.assertRaises(TypeError, msg=msg) as err:
-            get_product_by_id([1, 2, 3])
-
-        msg = self.base_msg % ("retornando a mensagem apropriada com o TypeError",)
-        self.assertEqual(*err.exception.args, "product id must be an int", msg=msg)

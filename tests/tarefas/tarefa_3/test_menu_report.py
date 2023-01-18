@@ -11,7 +11,8 @@ class TestMenuReport(unittest.TestCase):
 
     def test_menu_report_success(self):
         """
-        Testa se a função `menu_report` retorna os logs corretamente [0 pts].
+        Testa se a função `menu_report` retorna os 
+        logs corretamente.
         """
         result = menu_report()
         expected = "Products Count: 50 - Average Price: $20.8 - Most Common Type: fruit"

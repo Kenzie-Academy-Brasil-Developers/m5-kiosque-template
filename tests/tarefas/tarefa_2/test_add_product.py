@@ -2,7 +2,7 @@ import unittest
 
 from management.product_handler import add_product
 
-from ..data import original_products
+from tests.data.original_menu import original_products
 
 
 class TestAddProduct(unittest.TestCase):
@@ -13,7 +13,8 @@ class TestAddProduct(unittest.TestCase):
 
     def test_can_add_product(self):
         """
-        Testa se a função `add_product` adiciona e retorna o produto adicionado corretamente [0 pts].
+        Testa se a função `add_product` 
+        adiciona e retorna o produto adicionado corretamente.
         """
         new_product = {
             "title": "Bolinho JS",
@@ -44,7 +45,8 @@ class TestAddProduct(unittest.TestCase):
 
     def test_add_product_with_empty_menu(self):
         """
-        Testa se a função `add_product` gera um id, adiciona e retorna corretamente com um menu vazio [0 pts].
+        Testa se a função `add_product` gera um id, 
+        adiciona e retorna corretamente com um menu vazio.
         """
         new_product = {
             "title": "Suco de React",

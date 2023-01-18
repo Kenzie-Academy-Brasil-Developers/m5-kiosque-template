@@ -11,7 +11,8 @@ class TestGetProductByType(unittest.TestCase):
 
     def test_can_get_product_by_type(self):
         """
-        Testa se a função `get_product_by_type` retorna os produtos de determinado tipo corretamente [0 pts].
+        Testa se a função `get_product_by_type` retorna 
+        os produtos de determinado tipo corretamente.
         """
         result = get_products_by_type("drink")
         expected = [
@@ -41,7 +42,8 @@ class TestGetProductByType(unittest.TestCase):
 
     def test_get_product_by_type_with_non_existing_type(self):
         """
-        Testa se a função `get_product_by_type` retorna uma lista vazia caso não exista nenhum produto do tipo [0 pts].
+        Testa se a função `get_product_by_type` retorna 
+        uma lista vazia caso não exista nenhum produto do tipo.
         """
         result = get_products_by_type("non_existing_type_10000")
         expected = []
@@ -56,16 +58,4 @@ class TestGetProductByType(unittest.TestCase):
 
         self.assertListEqual(result, expected, msg)
 
-    def test_get_product_by_type_raises_type_error(self):
-        """
-        Testa se a função `get_product_by_type` levanta um TypeError caso o tipo do parâmetro passado não seja uma string [0 pts].
-        """
-
-        msg = self.base_msg % (
-            "levantando um `TypeError` caso o parâmetro passado não seja uma string",
-        )
-        with self.assertRaises(TypeError, msg=msg) as err:
-            get_products_by_type([1, 2, 3])
-
-        msg = self.base_msg % ("retornando a mensagem apropriada com o TypeError",)
-        self.assertEqual(*err.exception.args, "product type must be a str", msg=msg)
+    

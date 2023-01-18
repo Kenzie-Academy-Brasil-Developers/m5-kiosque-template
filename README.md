@@ -1,21 +1,55 @@
-# M5 - Kiosque
+<h1> M5 - Kiosque </h1>
 
-## Como rodar os testes localmente
+<h2> Como rodar os testes localmente </h2>
 
-1. Instalar o pacote `pytest-testdox`:
+<h3> Preparação do ambiente <h3>
+
+<p>Instalar o pacote <strong>pytest-testdox</strong>:</p>
+
 ```shell
 pip install pytest-testdox
 ```
 
-2. Rodar os testes no diretório principal do projeto:
-```shell
-pytest --testdox -vvs
-```
-
-
-### Rodando os testes localmente para o extra (não contabiliza para a entrega)
+<p>Rodar os testes referentes a cada tarefa isoladamente:</p>
 
 ```shell
-pytest --testdox -vvs tests/test_management/extra_add_product.py
+pytest --testdox -vvs caminho/para/o/modulo/da/tarefa
+```
+Exemplo:
+<ul>
+<li>Tarefa 1</li>
+
+```shell
+pytest --testdox -vvs tests/tarefas/tarefa_1/
 ```
 
+<li>Tarefa 2</li>
+
+```shell
+pytest --testdox -vvs tests/tarefas/tarefa_2/
+```
+<li>Tarefa 3</li>
+
+```shell
+pytest --testdox -vvs tests/tarefas/tarefa_3/
+```
+
+</ul>
+<hr>
+<p>Você também pode rodar cada método de teste isoladamente:</p>
+
+```shell
+pytest --testdox -vvs caminho/para/o/arquivo/de/teste::NomeDaClasse::nome_do_metodo_de_teste
+```
+
+<p>Exemplo: executar somente "test_can_get_product_by_id".</p>
+
+```shell
+pytest --testdox -vvs tests/tarefas/tarefa_1/test_get_product_by_id.py::TestGetProductById::test_can_get_product_by_id
+```
+<hr>
+<p>Os testes referentes as funcionalidades extras não são executados por padrão caso você não especifique o caminho até eles. Então caso você queira os executar, rode:</p>
+
+```shell
+pytest --testdox -vvs tests/tarefas/tarefa_3/extra_add_product.py
+```

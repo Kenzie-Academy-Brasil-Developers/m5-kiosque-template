@@ -2,7 +2,7 @@ import unittest
 
 from management.product_handler import add_product_extra
 
-from ..data import original_products
+from ...data import original_products
 
 
 class TestExtraAddProduct(unittest.TestCase):
@@ -13,7 +13,9 @@ class TestExtraAddProduct(unittest.TestCase):
 
     def test_extra_can_add_product(self):
         """
-        Testa se a função `add_product_extra` adiciona e retorna o produto adicionado corretamente [0 pts].
+        Testa se a função `add_product_extra` 
+        adiciona e retorna o produto adicionado 
+        corretamente.
         """
         required_keys = ("description", "price", "rating", "title", "type")
         new_product = {
@@ -45,7 +47,8 @@ class TestExtraAddProduct(unittest.TestCase):
 
     def test_extra_add_product_with_empty_menu(self):
         """
-        Testa se a função `add_product_extra` gera um id, adiciona e retorna corretamente com um menu vazio [0 pts].
+        Testa se a função `add_product_extra` gera um id, 
+        adiciona e retorna corretamente com um menu vazio.
         """
         required_keys = ("description", "price", "rating", "title", "type")
         new_product = {
@@ -71,7 +74,9 @@ class TestExtraAddProduct(unittest.TestCase):
 
     def test_extra_add_product_required_keys(self):
         """
-        Testa se a função `add_product_extra` levanta um KeyError caso alguma chave obrigatória nao seja passada no produto [0 pts].
+        Testa se a função `add_product_extra` 
+        levanta um KeyError caso alguma chave obrigatória 
+        não seja passada no produto.
         """
 
         required_keys = ["price", "rating", "title", "type", "description"]
@@ -111,7 +116,9 @@ class TestExtraAddProduct(unittest.TestCase):
 
     def test_extra_add_product_with_extra_keys(self):
         """
-        Testa se a função `add_product_extra` exclui chaves não obrigatórias antes de adicionar o produto ao menu [0 pts].
+        Testa se a função `add_product_extra` 
+        exclui chaves não obrigatórias antes de adicionar o 
+        produto ao menu.
         """
         required_keys = ("description", "price", "rating", "title", "type")
         new_product = {

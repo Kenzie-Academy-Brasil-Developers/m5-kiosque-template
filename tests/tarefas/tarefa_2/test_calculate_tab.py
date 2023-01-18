@@ -37,7 +37,8 @@ class TestCalculateTab(unittest.TestCase):
 
     def test_calculate_tab_success(self):
         """
-        Testa se a função `calculate_tab` retorna adequadamente [0 pts].
+        Testa se a função `calculate_tab` 
+        retorna adequadamente.
         """
         table_1 = [{"_id": 1, "amount": 5}, {"_id": 19, "amount": 5}]
         result = calculate_tab(table_1)
