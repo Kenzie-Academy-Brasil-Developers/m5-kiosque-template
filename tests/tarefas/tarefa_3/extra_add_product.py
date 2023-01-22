@@ -9,7 +9,7 @@ class TestExtraAddProduct(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         function_name = "add_product_extra"
-        cls.base_msg = f"Verifique se sua função `{function_name}` está %s."
+        cls.base_msg = f"\n Verifique se sua função `{function_name}` está %s."
 
     def test_extra_can_add_product(self):
         """
