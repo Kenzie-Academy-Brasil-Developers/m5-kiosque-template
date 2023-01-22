@@ -16,14 +16,6 @@ pip install pytest-testdox
 pytest --testdox -vvs caminho/para/o/modulo/da/tarefa
 ```
 
-**Importante!!**
-Caso esteja utilizando Windows e, ao rodar o comando pytest --testdox aparecer um erro de cmdlet, troque o inicio do comando pelo seguinte
-
-```shell
-pythom -m pytest --testdox
-```
-  
-  
 Exemplo:
 <ul>
 <li>Tarefa 1</li>
@@ -44,6 +36,14 @@ pytest --testdox -vvs tests/tarefas/tarefa_3/
 ```
 
 </ul>
+
+### **Importante!!**
+Caso esteja utilizando Windows e, ao rodar o comando `pytest --testdox` aparecer um erro de **cmdlet**, troque o inicio do comando pelo seguinte:
+
+```shell
+pythom -m pytest --testdox
+```
+
 <hr>
 <p>Você também pode rodar cada método de teste isoladamente:</p>
 
