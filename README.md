@@ -15,6 +15,15 @@ pip install pytest-testdox
 ```shell
 pytest --testdox -vvs caminho/para/o/modulo/da/tarefa
 ```
+
+**Importante!!**
+Caso esteja utilizando Windows e, ao rodar o comando pytest --testdox aparecer um erro de cmdlet, troque o inicio do comando pelo seguinte
+
+```shell
+pythom -m pytest --testdox
+```
+  
+  
 Exemplo:
 <ul>
 <li>Tarefa 1</li>
@@ -52,4 +61,12 @@ pytest --testdox -vvs tests/tarefas/tarefa_1/test_get_product_by_id.py::TestGetP
 
 ```shell
 pytest --testdox -vvs tests/tarefas/tarefa_3/extra_add_product.py
+```
+
+## Rodando todos os testes
+
+Para rodar todos os testes da aplicação de uma vez, execute o seguinte comando no terminal (estando na raiz do projeto)
+
+```shell
+pytest --testdox
 ```
