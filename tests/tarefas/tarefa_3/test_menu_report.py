@@ -7,7 +7,7 @@ class TestMenuReport(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         function_name = "menu_report"
-        cls.base_msg = f"Verifique se sua função `{function_name}` está %s."
+        cls.base_msg = f"\n Verifique se sua função `{function_name}` está %s."
 
     def test_menu_report_success(self):
         """
