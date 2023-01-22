@@ -7,7 +7,7 @@ class TestCalculateTab(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         function_name = "calculate_tab"
-        cls.base_msg = f"Verifique se sua função `{function_name}` está %s."
+        cls.base_msg = f"\n Verifique se sua função `{function_name}` está %s."
         cls.tables_set = [
             {
                 "expected": {"subtotal": "$188.29"},
