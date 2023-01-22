@@ -7,7 +7,7 @@ class TestGetProductByType(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         function_name = "get_product_by_type"
-        cls.base_msg = f"Verifique se sua função `{function_name}` está %s."
+        cls.base_msg = f"\n Verifique se sua função `{function_name}` está %s."
 
     def test_can_get_product_by_type(self):
         """
