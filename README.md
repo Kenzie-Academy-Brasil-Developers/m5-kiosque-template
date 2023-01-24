@@ -41,7 +41,7 @@ pytest --testdox -vvs tests/tarefas/tarefa_3/
 Caso esteja utilizando Windows e, ao rodar o comando `pytest --testdox` aparecer um erro de **cmdlet**, troque o inicio do comando pelo seguinte:
 
 ```shell
-pythom -m pytest --testdox
+python -m pytest --testdox
 ```
 
 <hr>
