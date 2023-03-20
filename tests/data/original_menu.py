@@ -89,18 +89,18 @@ original_products = [
     },
     {
         "_id": 2,
-        "description": "Sweet fresh stawberry on the wooden table",
+        "description": "Sweet fresh strawberry on the wooden table",
         "price": 29.45,
         "rating": 4,
-        "title": "Sweet fresh stawberry",
+        "title": "Sweet fresh strawberry",
         "type": "fruit",
     },
     {
         "_id": 9,
-        "description": "Sweet fresh stawberry on the wooden table",
+        "description": "Sweet fresh strawberry on the wooden table",
         "price": 28.59,
         "rating": 4,
-        "title": "Fresh stawberry",
+        "title": "Fresh strawberry",
         "type": "fruit",
     },
     {
