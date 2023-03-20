@@ -73,7 +73,7 @@ products = [
     },
     {
         "_id": 7,
-        "description": "Italian traditional pesto with basil, chesse and oil",
+        "description": "Italian traditional pesto with basil, cheese and oil",
         "price": 18.19,
         "rating": 2,
         "title": "Pesto with basil",
@@ -220,7 +220,7 @@ products = [
         "description": "Homemade traditional cuban sandwiches with ham pork and cheese",
         "price": 18.5,
         "rating": 4,
-        "title": "Cuban sandwiche",
+        "title": "Cuban sandwich",
         "type": "bakery",
     },
     {
