@@ -15,7 +15,7 @@ class TestMenuReport(unittest.TestCase):
         logs corretamente.
         """
         result = menu_report()
-        expected = "Products Count: 50 - Average Price: $20.8 - Most Common Type: fruit"
+        expected = "Products Count: 51 - Average Price: $20.6 - Most Common Type: fruit"
 
         msg = self.base_msg % "retornando a mensagem adequada com os valores corretos"
         self.assertEqual(result, expected, msg)

@@ -399,4 +399,12 @@ original_products = [
         "title": "Homemade bread",
         "type": "bakery",
     },
+    {
+        "_id": 102,
+        "description": "Homemade bread",
+        "price": 10.48,
+        "rating": 2,
+        "title": "Homemade bread",
+        "type": "bakery",
+    },
 ]

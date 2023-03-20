@@ -26,7 +26,7 @@ class TestAddProduct(unittest.TestCase):
 
         result = add_product(original_products, **new_product)
         expected = {
-            "_id": 51,
+            "_id": 103,
             "title": "Bolinho JS",
             "price": 1.0,
             "rating": 2,
