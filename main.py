@@ -3,6 +3,7 @@ from management.product_handler import get_products_by_type
 from management.product_handler import add_product
 from menu import products
 from management.tab_handler import calculate_tab
+from management.product_handler import menu_report
 
 if __name__ == "__main__":
     # Seus prints de teste aqui
@@ -23,5 +24,6 @@ if __name__ == "__main__":
         {"_id": 21, "amount": 5},
     ]
     print(calculate_tab(table_1))
-    print(calculate_tab(table_2))   
+    print(calculate_tab(table_2))
+    print(menu_report())
     ...
