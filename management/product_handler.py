@@ -29,6 +29,7 @@ def get_product_by_id(id: int):
 
 
 def get_products_by_type(type: str):
+
     x = filter_products(type, "type")
 
     if x: 
@@ -36,3 +37,19 @@ def get_products_by_type(type: str):
     else:
         return []
     ...
+
+
+def add_product(menu_list: list, **payload: dict):
+    list = []
+
+    for element in menu_list:
+        list.append(element["_id"])
+        ...
+
+    big = max(list)
+
+    payload["_id"] = big + 1
+
+    menu_list.append(payload)
+
+    return payload
