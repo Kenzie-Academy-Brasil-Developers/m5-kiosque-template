@@ -46,9 +46,15 @@ def add_product(menu_list: list, **payload: dict):
         list.append(element["_id"])
         ...
 
-    big = max(list)
+    print(list)
 
-    payload["_id"] = big + 1
+    if list:
+        big = max(list)
+
+        payload["_id"] = big + 1
+    else:
+
+        payload["_id"] = 1
 
     menu_list.append(payload)
 
