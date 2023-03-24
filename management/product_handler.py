@@ -10,17 +10,29 @@ def filter_products(id, key: str):
             return False
         
     x = filter(fiter_list, products)
+
+    list = []
     
     for i in x:
-        return (i)
-    ...
+        list.append(i)
+    
+    return list
 
 
 def get_product_by_id(id: int):
     x = filter_products(id, "_id")
 
     if x: 
-        return x
+        return x[0]
     else:
         return {}
 
+
+def get_products_by_type(type: str):
+    x = filter_products(type, "type")
+
+    if x: 
+        return x
+    else:
+        return []
+    ...
