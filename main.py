@@ -1,6 +1,7 @@
 from menu import products
 
-from management import get_product_by_id, get_products_by_type, add_product, calculate_tab
+from management.product_handler import get_product_by_id, get_products_by_type, add_product
+from management.tab_handler import calculate_tab
 
 
 if __name__ == "__main__":
