@@ -37,7 +37,7 @@ def get_products_by_type(type: str):
 
     x = filter_products(type, "type")
 
-    if x: 
+    if x:
         return x
     else:
         return []
