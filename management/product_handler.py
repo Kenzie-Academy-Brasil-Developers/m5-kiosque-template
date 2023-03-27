@@ -2,6 +2,8 @@ from menu import products
 
 
 def get_product_by_id(id):
+    if type(id) != int:
+        raise TypeError("product id must be an int")
     for product in products:
         if product["_id"] == id:
             return product
@@ -9,6 +11,8 @@ def get_product_by_id(id):
 
 
 def get_products_by_type(product_type):
+    if type(product_type) != str:
+        raise TypeError("product type must be a str")
     products_list = []
     for product in products:
         if product["type"] == product_type:
@@ -33,3 +37,15 @@ def add_product(menu, **new_product):
         added_product = {"_id": max_id + 1, **new_product}
         menu.append(added_product)
         return added_product
+
+
+def menu_report():
+    products_count = len(products)
+    products_sum = 0
+
+    for product in products:
+        products_sum += product["price"]
+
+    average_price = round(products_sum/products_count, 2)
+
+    return f"Products Count: {products_count} - Average Price: ${average_price} - Most Common Type:"
