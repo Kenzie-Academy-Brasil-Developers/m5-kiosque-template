@@ -42,10 +42,19 @@ def add_product(menu, **new_product):
 def menu_report():
     products_count = len(products)
     products_sum = 0
+    products_type = []
 
     for product in products:
         products_sum += product["price"]
+        products_type.append(product["type"])   
+    most_common_type = 0
+    most_common_type_name = ""
+
+    for product_type in products_type:
+        if products_type.count(product_type) > most_common_type:
+            most_common_type = products_type.count(product_type)
+            most_common_type_name = product_type
 
     average_price = round(products_sum/products_count, 2)
 
-    return f"Products Count: {products_count} - Average Price: ${average_price} - Most Common Type:"
+    return f"Products Count: {products_count} - Average Price: ${average_price} - Most Common Type: {most_common_type_name}"
