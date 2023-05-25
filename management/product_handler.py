@@ -22,3 +22,16 @@ def add_product(product_list, new_product):
     product = {"_id": new_id, **new_product}
     product_list.append(product)
     return product
+
+def calculate_tab(consumptions):
+    subtotal = 0.0
+    for consumption in consumptions:
+        product_id = consumption["_id"]
+        amount = consumption["amount"]
+
+        product = get_product_by_id(product_id)
+        
+        if product:
+            price = product["price"]
+            subtotal += price * amount
+    return {"subtotal": "${:.2f}".format(subtotal)}
