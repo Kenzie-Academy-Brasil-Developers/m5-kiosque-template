@@ -65,3 +65,28 @@ def menu_report():
             break
     report_string = f"Products Count: {total_products} - Average Price: ${average_prices} - Most Common Type: {most_common_type}"
     return report_string
+
+
+def add_product_extra(menu, *args, **kwargs):
+    new_product = kwargs
+    required_keys = args
+    # Remove as chaves não obrigatórias do novo produto
+    for key in list(new_product.keys()):
+        if key not in required_keys:
+            new_product.pop(key)
+    # Verifica se todas as chaves obrigatórias estão presentes no novo produto
+    missing_keys = [key for key in required_keys if key not in new_product]
+    if missing_keys:
+        raise KeyError(f"field {', '.join(missing_keys)} is required")
+    # Cria id
+    if len(menu) == 0:
+        new_product_id = 1
+    else:
+        last_product = menu[-1]
+        new_product_id = last_product["_id"] + 1
+    # Adiciona id ao produto
+    new_product["_id"] = new_product_id
+    # Adiciona o produto no menu
+    menu.append(new_product)
+    # Retorna o novo produto
+    return new_product
