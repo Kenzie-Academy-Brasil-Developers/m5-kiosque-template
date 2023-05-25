@@ -2,8 +2,14 @@ from menu import products
 
 
 def get_product_by_id(id):
+<<<<<<< HEAD
     for product in products:
         if product["_id"] == id:
+=======
+    
+    for product in products:
+        if product['_id'] == id:
+>>>>>>> 39b6850f62febd3c8e71c8f8d17972b95d905bc1
             return product
 
     return {}
@@ -13,6 +19,7 @@ def get_products_by_type(type):
     all_products = []
 
     for product in products:
+<<<<<<< HEAD
         if product["type"] == type:
             all_products.append(product)
 
@@ -37,3 +44,12 @@ def add_product(menu: list, **args: dict):
     menu.append(args)
 
     return args
+=======
+        if product['type'] == type:
+            all_products.append(product)
+        
+    if len(all_products) == 0:
+        return []
+    else:
+        return all_products
+>>>>>>> 39b6850f62febd3c8e71c8f8d17972b95d905bc1
