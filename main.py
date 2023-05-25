@@ -20,7 +20,7 @@ table_2 = [
 ]
 
 if __name__ == "__main__":
-    #print(get_product_by_id(28))
-    #print(get_products_by_type("drink"))
-    #print(add_product(products, new_product1))
+    print(get_product_by_id(28))
+    print(get_products_by_type("drink"))
+    print(add_product(products, new_product1))
     print(calculate_tab(table_1))
