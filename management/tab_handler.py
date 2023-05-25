@@ -9,7 +9,10 @@ def calculate_tab(dic_table):
     for table in dic_table:
         for product in products:
             if product["_id"] == table["_id"]:
-                prices_products.append(product["price"])
+                price = product["price"]
+                amount = table["amount"]
+                subtotal = price * amount
+                prices_products.append(subtotal)
     # Soma os valores dos produtos consumidos
     soma_total = round(sum(prices_products), 2)
     return {"subtotal": f"${soma_total}"}
