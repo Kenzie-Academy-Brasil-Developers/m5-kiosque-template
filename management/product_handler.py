@@ -17,15 +17,15 @@ def get_products_by_type(product_type):
             matching_products.append(product)
     return matching_products
 
-def add_product(product_list, new_product):
+def add_product(product_list: list, **new_product: dict):
     if product_list:
         max_id = max(product_list, key = lambda x: x["_id"])
         new_id = max_id["_id"] + 1
     else:
         new_id = 1
-    product = {"_id": new_id, **new_product}
-    product_list.append(product)
-    return product
+    new_product["_id"] = new_id
+    product_list.append(new_product)
+    return new_product
 
 def menu_report():
     pass
