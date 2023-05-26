@@ -1,4 +1,5 @@
 from menu import products
+from statistics import mode
 
 def get_product_by_id(product_id):
     if type(product_id) is not int:
@@ -28,4 +29,8 @@ def add_product(product_list: list, **new_product: dict):
     return new_product
 
 def menu_report():
-    pass
+    product_count = len(products)
+    average_price = round(sum(product["price"] for product in products) / product_count, 2)
+    most_common_type = mode(product["type"] for product in products)
+
+    return f"Products Count: {product_count} - Average Price: ${average_price} - Most Common Type: {most_common_type}"

@@ -1,6 +1,7 @@
 from management.product_handler import get_product_by_id
 from management.product_handler import get_products_by_type
 from management.product_handler import add_product
+from management.product_handler import menu_report
 from management.tab_handler import calculate_tab
 from menu import products
 
@@ -42,4 +43,5 @@ if __name__ == "__main__":
     #print(get_products_by_type("drink"))
     #print(add_product(products, **new_product1))
     #print(add_product(empty_list, **new_product2))
-    print(calculate_tab(table_1))
+    #print(calculate_tab(table_1))
+    print(menu_report())
