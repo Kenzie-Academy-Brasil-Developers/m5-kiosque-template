@@ -11,4 +11,4 @@ def calculate_tab(consumptions: list):
         if product:
             price = product["price"]
             subtotal += price * amount
-    return {"subtotal": "${:.2f}".format(subtotal)}
+    return {"subtotal": f"${round(subtotal, 2)}"}

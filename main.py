@@ -29,7 +29,7 @@ table_2 = [
     {"_id": 21, "amount": 5},
 ]
 
-#if __name__ == "__main__":
+if __name__ == "__main__":
     #print(get_product_by_id(28))
     # try:
     #     print(get_product_by_id([1, 2, 3]))
@@ -42,4 +42,4 @@ table_2 = [
     #print(get_products_by_type("drink"))
     #print(add_product(products, **new_product1))
     #print(add_product(empty_list, **new_product2))
-    #print(calculate_tab(table_1))
+    print(calculate_tab(table_1))
