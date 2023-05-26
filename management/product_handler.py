@@ -1,7 +1,7 @@
 from menu import products
 from statistics import mode
 
-def get_product_by_id(product_id):
+def get_product_by_id(product_id: int):
     if type(product_id) is not int:
         raise TypeError("product id must be an int")
     for product in products:
@@ -9,7 +9,7 @@ def get_product_by_id(product_id):
             return product
     return {}
 
-def get_products_by_type(product_type):
+def get_products_by_type(product_type: str):
     matching_products = []
     if type(product_type) is not str:
         raise TypeError("product type must be a str")
@@ -34,3 +34,10 @@ def menu_report():
     most_common_type = mode(product["type"] for product in products)
 
     return f"Products Count: {product_count} - Average Price: ${average_price} - Most Common Type: {most_common_type}"
+
+def add_product_extra(product_list: list, *required_keys: tuple, **new_product: dict):
+    for key in required_keys:
+        if key not in new_product:
+            raise KeyError(f"Field {key} is required")
+    new_product = {key: new_product[key] for key in required_keys}
+    return add_product(product_list, **new_product)

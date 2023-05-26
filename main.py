@@ -1,6 +1,7 @@
 from management.product_handler import get_product_by_id
 from management.product_handler import get_products_by_type
 from management.product_handler import add_product
+from management.product_handler import add_product_extra
 from management.product_handler import menu_report
 from management.tab_handler import calculate_tab
 from menu import products
@@ -21,6 +22,23 @@ new_product2 = {
     "type": "drink",
 }
 
+new_product3 = {
+    "title": "Suco de React",
+    "price": 5.0,
+    #"rating": 4,
+    "description": "Suco de React com Limao",
+    "type": "drink",
+}
+
+new_product4 = {
+    "title": "Sandubão de Python",
+    "price": 15.0,
+    "rating": 5,
+    "description": "Sandubão de Python com recheio EXTRA",
+    "type": "sandwich",
+    "recheio": "extra",
+}
+
 empty_list = []
 
 table_1 = [{"_id": 1, "amount": 5}, {"_id": 19, "amount": 5}]
@@ -29,6 +47,8 @@ table_2 = [
     {"_id": 20, "amount": 2},
     {"_id": 21, "amount": 5},
 ]
+
+required_keys = ("title", "price", "rating", "description", "type")
 
 if __name__ == "__main__":
     #print(get_product_by_id(28))
@@ -44,4 +64,13 @@ if __name__ == "__main__":
     #print(add_product(products, **new_product1))
     #print(add_product(empty_list, **new_product2))
     #print(calculate_tab(table_1))
-    print(menu_report())
+    #print(menu_report())
+    print(add_product_extra(products, *required_keys, **new_product1))
+    try:
+        print(add_product_extra(products, *required_keys, **new_product3))
+    except KeyError as error:
+        print(error)
+    try:
+        print(add_product_extra(products, *required_keys, **new_product4))
+    except KeyError as error:
+        print(error)
