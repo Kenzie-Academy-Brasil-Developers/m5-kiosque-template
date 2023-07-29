@@ -5,5 +5,6 @@ def main():
     print(get_product_by_id(28))
     print(get_products_by_type('drink'))
 
+
 if __name__ == "__main__":
     main()
