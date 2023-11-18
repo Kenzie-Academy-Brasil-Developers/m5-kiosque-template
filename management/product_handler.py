@@ -16,3 +16,11 @@ def get_products_by_type(product_type: str) -> dict:
     return filtered_products
 
 
+def add_product(menu: list, **product_data: dict) -> dict:
+    last_id = 0
+    for product in menu:
+        if product['_id'] > last_id:
+            last_id = product['_id']
+    product_data['_id'] = last_id + 1
+    menu.append(product_data)
+    return product_data
