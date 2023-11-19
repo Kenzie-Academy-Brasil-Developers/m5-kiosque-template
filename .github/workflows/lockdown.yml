@@ -1,4 +1,4 @@
-name: "Repo Lockdown"
+'name: "Repo Lockdown"
 
 on:
   issues:
