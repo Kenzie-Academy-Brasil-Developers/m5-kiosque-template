@@ -10,4 +10,5 @@ def get_product_by_id(id: int) -> dict:
 
 
 def get_product_by_type():
+    ...
     
