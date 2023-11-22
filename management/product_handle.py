@@ -6,3 +6,8 @@ def get_product_by_id(id: int) -> dict:
         if product['_id'] == id:
             return product
     return {}
+
+
+
+def get_product_by_type():
+    
