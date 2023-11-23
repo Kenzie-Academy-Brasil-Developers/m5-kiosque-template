@@ -8,7 +8,10 @@ def get_product_by_id(id: int) -> dict:
     return {}
 
 
+def get_product_by_type(type: str):
+    filtered_products = []
 
-def get_product_by_type():
-    ...
-    
+    for product in products:
+        if product['type'] == type:
+            filtered_products.append(product)
+    return filtered_products
