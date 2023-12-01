@@ -22,3 +22,4 @@ if __name__ == "__main__":
     ]
     product_handler.add_product(menu, **new_product)
     print(tab_handler.calculate_tab(table_2))
+    print(product_handler.menu_report())
