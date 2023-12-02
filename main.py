@@ -4,9 +4,9 @@ from management import tab_handler, product_handler
 menu = []
 
 if __name__ == "__main__":
-    # product_handler.get_product_by_id(50)
-    # print(product_handler.get_product_by_id(25))
-    # print(product_handler.get_products_by_type('fruit'))
+    product_handler.get_product_by_id(50)
+    print(product_handler.get_product_by_id(25))
+    print(product_handler.get_products_by_type('fruit'))
     new_product = {
         "description": "Homemade healthy caprese salad withbasil",
         "price": 16.76,
